@@ -3,7 +3,7 @@ import './App.css';
 import PokemonCards from "./components/PokemonCards";
 import axios from "axios";
 import Pagination from "./components/Pagination";
-import './assets/pokemon-23.svg'
+import pokemon from './assets/pokemon-23.svg'
 
 const App = () => {
     // const navigate = useNavigate();
@@ -29,7 +29,7 @@ const App = () => {
     useEffect(()=>{
         // acties die uitgevoerd worden na mount
         console.log("Mounting")
-                fetchEmall();
+        fetchEmall();
 
         return function cleanup() {
             // acties die uitgevoerd worden na unmount
@@ -46,12 +46,10 @@ const App = () => {
         setPokemonCurrent(pokemonPrevious)
         console.log("Previous")
     }
-
-
     return (
-            <>
-                <div className="page">
-                    <img src="./assets/pokemon-23.svg" alt=""/>
+        <>
+            <div className="page">
+                <img src={pokemon} alt="pokemonphoto" className="image"/>
                 <Pagination handleClickNext={ pokemonNext ? handleClickNext : null } handleClickPrevious={pokemonPrevious ? handleClickPrevious : null } pokemonPrevious={pokemonPrevious}/>
                 {Object.keys(pokemons).length > 0 &&
                     <>
@@ -64,10 +62,10 @@ const App = () => {
                         </ul>
                     </>
                 }
-                </div>
-            </>
+            </div>
+        </>
 
-        )
+    )
 
 }
 export default App;

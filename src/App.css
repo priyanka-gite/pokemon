@@ -1,19 +1,23 @@
 .page {
     background-color: orange;
     padding-right: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
 }
 .parent {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    grid-column-gap: 5px;
-    grid-row-gap: 5px;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
 }
 .child {
     border: solid red 1px;
     padding: 2px;
     margin: 2px;
-list-style: none;
+    list-style: none;
     background-color: white;
 }
 .button-style {
@@ -43,5 +47,10 @@ list-style: none;
     margin: 2px;
     background-color: lightgray;
     padding-right: 15px;
-    padding-left: 15px;
+    padding-left: 70px;
+   justify-content: center;
+    align-content: center;
+}
+.image {
+    max-width: 500px;
 }
