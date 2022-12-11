@@ -48,6 +48,9 @@
     background-color: lightgray;
     padding-right: 15px;
     padding-left: 70px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
    justify-content: center;
     align-content: center;
 }

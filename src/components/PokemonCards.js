@@ -24,8 +24,7 @@ const PokemonCards = ({name}) => {
                     <img src= {pokemonData.sprites.front_default} alt={pokemonData.name}/>
                     <h4>Moves: {pokemonData.moves.length}</h4>
                     <h4>Weight: {pokemonData.weight}</h4>
-
-                    <ul>   <h4>Abilities:</h4>
+                    <ul className="ability-list-style">   <h4>Abilities:</h4>
                         {pokemonData.abilities.map((a)=> {
                                 return (
                                     <li className="ability-list" key={a.ability.name}>{a.ability.name}</li>
