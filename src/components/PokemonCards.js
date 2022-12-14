@@ -2,7 +2,7 @@ import React ,{useState,useEffect} from 'react';
 import axios from "axios";
 
 const PokemonCards = ({name}) => {
-    const [pokemonData,setPokemonData] = useState({});
+    const [pokemonData,setPokemonData] = useState();
     async function fetchPokemon () {
         try{
             const result = await axios.get(`https://pokeapi.co/api/v2/pokemon/${name}`)
@@ -18,7 +18,7 @@ const PokemonCards = ({name}) => {
     return (
         <>
 
-            {Object.keys(pokemonData).length > 0 &&
+            {pokemonData &&
                 <div className="child-content">
                     <h2>{pokemonData.name}</h2>
                     <img src= {pokemonData.sprites.front_default} alt={pokemonData.name}/>
